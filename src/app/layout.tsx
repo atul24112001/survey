@@ -16,7 +16,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="w-[90%] min-h-screen sm:w-[80%] md:w-[70%] lg:w-[40%] xl:w-[30%] m-auto py-4 flex flex-col">
+          <div className="flex-1">{children}</div>
+          <div className="mt-4">
+            <p className="text-xs text-center text-gray-300">
+              We will only save your info like country, city, state, coordinates
+              and ip, just for counting purposes.
+            </p>
+            <p className="text-xs text-center text-gray-300">
+              🇮🇳 All rights 2024 ©
+            </p>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
