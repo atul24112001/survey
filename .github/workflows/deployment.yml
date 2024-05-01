@@ -20,4 +20,4 @@ jobs:
           chmod 600 keyfile
           mkdir -p ~/.ssh
           cp known_hosts ~/.ssh/known_hosts
-          ssh -t -i keyfile root@164.68.103.23 "cd ~/survey && git pull origin main && chmod +x ~/survey/deploy.sh && sudo bash ~/survey/deploy.sh $POSTGRES_PASSWORD"
+          ssh -t -i keyfile root@164.68.103.23 "cd ~/survey && git stash && git pull origin main && chmod +x ~/survey/deploy.sh && sudo bash ~/survey/deploy.sh"
