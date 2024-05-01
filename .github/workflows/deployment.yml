@@ -10,7 +10,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: Installing Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.9.0
+          cache: "npm"
       - name: SSH and deploy
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
