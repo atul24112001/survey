@@ -3,6 +3,7 @@ export PATH=$PATH:/root/.nvm/versions/node/v20.9.0/bin
 
 cd ~/survey
 
+git stash
 npm install
 npx prisma migrate deploy
 npx prisma generate
