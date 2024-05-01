@@ -2,12 +2,12 @@
 export PATH=$PATH:/root/.nvm/versions/node/v20.9.0/bin
 
 cd ~/survey
-pm2 delete survey
 
 npm install
 npx prisma migrate deploy
 npx prisma generate
 npm run build
+pm2 delete survey
 pm2 start npm --name "survey" -- start
 
 

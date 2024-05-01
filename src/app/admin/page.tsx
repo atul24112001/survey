@@ -31,6 +31,8 @@ export default function Admin() {
       ...creds,
       banner,
     });
+    setBanner(null);
+    setDetails({ options: [], title: "" });
   };
 
   const handleAuthFormChange = (e: any) => {

@@ -1,5 +1,6 @@
 "use client";
 
+import Loader from "@/components/Loader";
 import { Each } from "@/components/each";
 import axios from "axios";
 import Image from "next/image";
@@ -112,6 +113,10 @@ export default function Home() {
   const searchHandler = (e: any) => {
     setSearch(e.target.value);
   };
+
+  if (!data) {
+    return <Loader />;
+  }
 
   return (
     <div>
